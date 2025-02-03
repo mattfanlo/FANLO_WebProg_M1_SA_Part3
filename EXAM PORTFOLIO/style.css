@@ -1,0 +1,142 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.cont {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #333;
+    color: white;
+    width: 15%;
+    padding: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li {
+    margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+/* Main content styles */
+.maintxt {
+    padding: 30px;
+    width: 85%;
+    background-color: #fff;
+}
+
+.maintxt h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.maintxt p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Magic words and animations */
+.magic-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.magic-scroll {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+
+/* Animation styles */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate__zoomIn {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cont {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .maintxt {
+        width: 100%;
+    }
+}

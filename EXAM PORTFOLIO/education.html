@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .education-logos {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .education-logos img {
+            width: 150px;
+            height: auto;
+        }
+
+        .education-details {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .maintxt h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 15%;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            color: white;
+            padding: 0;
+            margin-top: 50px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 25px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="sidebar">
+            <ul>
+                <li>Matthew's Education</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+            </ul>
+        </div>
+        <div class="maintxt">
+            <h1>Education Background</h1>
+            <ul>
+                <li onclick="toggleDetails('acd-details')">
+                    <div class="education-logos">
+                        <img src="acdlogo.png" alt="Assumption College of Davao Logo">
+                    </div>
+                    Assumption College of Davao (2010-2023) - Elementary to Senior High
+                    <div id="acd-details" class="education-details">
+                        Location: Davao City, Philippines<br>
+                        Key Achievements: Excellence in Science and Math, Leadership roles in Student Government.
+                    </div>
+                </li>
+                <li onclick="toggleDetails('mcm-details')">
+                    <div class="education-logos">
+                        <img src="mcmlogo.png" alt="Mapua Malayan Colleges Mindanao Logo">
+                    </div>
+                    Mapua Malayan Colleges Mindanao (2023-Present) - Ongoing
+                    <div id="mcm-details" class="education-details">
+                        Major: Entertainment Multimedia Computing<br>
+                        Expected Graduation: 2027
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle visibility of education details
+        function toggleDetails(id) {
+            const detailsElement = document.getElementById(id);
+            if (detailsElement.style.display === "none" || detailsElement.style.display === "") {
+                detailsElement.style.display = "block";  // Show the details
+            } else {
+                detailsElement.style.display = "none";   // Hide the details
+            }
+        }
+    </script>
+</body>
+</html>
